@@ -29,6 +29,7 @@ app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/bills", require("./routes/billsRoute"));
 
 //deployment
+
 __dirname=path.resolve()
 if(process.env.NODE_ENV==='production'){
   app.use(express.static(path.join(__dirname,"/client/build")));
